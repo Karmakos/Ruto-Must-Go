@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Editor</title>
+    <link rel="stylesheet" href="/static/styles/index.css">
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.tiny.cloud/1/b9n9x0axeohqzicn6lplcu22bpk5s6r0ljzklylze0dqf2r6/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+      <script>
+        tinymce.init({
+            selector: '#editor',
+            license_key: 'b9n9x0axeohqzicn6lplcu22bpk5s6r0ljzklylze0dqf2r6',
+            menubar: true,
+            plugins: 'advlist autolink lists link image charmap preview anchor ' +
+                    'searchreplace visualblocks code fullscreen ' +
+                    'insertdatetime media table code help wordcount',
+            toolbar: 'undo redo | formatselect | ' +
+                    'bold italic backcolor | alignleft aligncenter ' +
+                    'alignright alignjustify | bullist numlist outdent indent | ' +
+                    'removeformat | help',
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+
+          
+          });
+      </script>
+
+  </head>
+
+<body>
+  <div class="container ">
+    <form class="row was-validated" method="post" id="blogPost"  name="blogPost">
+      <div class="col-12">
+        <p class="fs-6 pt-4 ps-2 text-end"><a href="/" >Go Back</a></p>
+
+      </div>     
+
+      <div class="col-md-10  mt-5">
+        <div class="position-relative mb-5">
+          <label for="validationTooltip03" class="form-label fs-3 pb-2">Article Title</label>
+          <input type="text" class="form-control" id="validationTooltip03" name="articleTitle" required>
+          <div class="invalid-feedback">
+            Please add a title for your article.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="validationTextarea" class="form-label">Add Content for Your Article </label>
+          <textarea class="form-control" id="editor" placeholder="Paste your article here.." name="articleContent" ></textarea>
+          
+        </div>
+   
+      </div>
+      <div class="col-md-2 ">
+        <div> 
+          <label class="fs-6 mt-5 mb-0">Set a featured image:</label>
+         
+            <input type="file" class="form-control"  id="myFile" name="articleFeaturedImage"  class=" " accept="image/gif, image/jpeg, image/png" required>
+            <label for="myFile"><img src="/static/Assets/image.png" alt="" id="uploadIcon" class="img-fluid feature-image"/></label>
+            <img id="imagePreview" src="" alt="Preview" />
+            <div class="invalid-feedback" bis_skin_checked="1">
+              Please add featured image.
+            </div>
+      
+        </div>
+        <div>
+            <div class="mb-3">
+              <label for="validationTextarea" class="form-label">Set Article Tags:</label>
+              <textarea name="articleTags" class="form-control" id="tags" placeholder="#politics... etc" required></textarea>
+              <div class="invalid-feedback">
+                Please add at least one tag.
+              </div>
+            </div>
+
+            <p class="fs-6 pt-2 mb-1">Set Category:</p>
+            <div class="input-group mb-3" bis_skin_checked="1" >
+              <select name ="articleCategory" class="form-select" id="inputGroupSelect01" required>
+                <option selected disabled value="" >Choose...</option>
+                <option value="politics">Political News</option>
+                <option value="Corruption">Corruption </option>
+                <option value="opinion">Opinion </option>
+                <option value="development">Development </option>
+                <option value="news">News  </option>
+                <option value="editorial">Editorial </option>
+              </select>
+              <div class="invalid-feedback" bis_skin_checked="1">
+                Please select a category.
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+      </div>
+      <div class="col-12">
+        <button type="submit" formaction="/preview" id="previewButton" class="btn btn-primary me-5 mt-3 mb-5 fs-6 pt-2 pb-2 pe-4 ps-4 submit-btn" > Preview </button>      
+        <button type="submit" formaction="/draft" id="saveDraftButton" class="btn btn-primary  ms-5 mt-3 mb-5 fs-6 pt-2 pb-2 pe-4 ps-4 submit-btn" > Save draft </button>      
+
+      </div>       
+    </form>
+  </div>
+</body>
+
+<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+<script src="static/scripts/index.js" type="module"></script>
+<script></script>
+
+
+
+
+</html>

@@ -1,0 +1,28 @@
+footer{
+    background-color: #f5f9fa;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+footer .logo{
+    height: auto;
+    width: 25%;
+    /* display: block; */
+    right: auto;
+    left: auto;
+}
+footer li{
+    list-style: none;
+}
+footer a{
+    text-decoration: none;
+    color: #0c4057;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: #023347;
+}
+footer a:active{
+    color: #023347;
+}

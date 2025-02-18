@@ -1,0 +1,37 @@
+header .navbar{
+    background-color: #f5f9fa !important;
+}
+
+header .logo{
+    width: 100px;
+    height: auto;
+}
+header .nav-link{
+    color: black !important;
+    padding: 0 10px;
+
+}
+header .nav-link:hover{
+    color: #023347!important;
+}
+header .nav-link:active{
+    color: #023347 !important;
+}
+
+header .donate-btn{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+header .submit-btn{
+    background-color: #0c4057;
+    border-color: #0c4057;
+    border-radius: 10px;
+    color: white;
+}
+header .btn:hover{
+    background-color: #023347; 
+    border-color: #023347; 
+}
+
+

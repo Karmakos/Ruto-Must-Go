@@ -1,0 +1,36 @@
+#myFile{
+    width: 100%;
+    display: none;
+}
+#editor{
+    height: 800px;
+    width: auto;
+}
+.featured-image{
+    max-height: 20px;
+    height: auto;
+    width: 100px;
+}
+#uploadIcon{
+    
+    width: 100%; 
+    /* background-image: url("/static/Assets/image.png"); */
+    height: auto; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+#imagePreview{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+.tags{
+    height: 100px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+

@@ -1,0 +1,24 @@
+.sign-page{
+    background-color: #0c4057;
+}
+
+.signup .sign-col{
+    background-color: white;
+    border-radius: 10px;
+
+} 
+.signup .sign-icon{
+    width: 35px !important;
+    height: auto;
+
+}
+
+.signup .nav-link:active {
+    border: 1px solid #0c4057 !important;
+    background-color: #0c4057;
+    color: white;
+  }
+  .signup .nav-link{
+    color: #0c4057;
+  }
+
